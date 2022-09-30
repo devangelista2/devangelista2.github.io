@@ -1,7 +1,7 @@
 ---
 title: Plotting with matplotlib
-categories: [Blogging, Tutorial]
-tags: [writing]
+categories: [Lab1, teaching]
+tags: [matplotlib, plotting, visualization, data, plot]
 math: true
 ---
 

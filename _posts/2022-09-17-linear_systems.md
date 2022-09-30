@@ -1,7 +1,7 @@
 ---
 title: Linear Systems with Numpy and Scipy
-categories: [Blogging, Tutorial]
-tags: [writing]
+categories: [Lab1, teaching]
+tags: [linear systems, linear algebra, numpy, scipy, conditioning]
 math: true
 ---
 

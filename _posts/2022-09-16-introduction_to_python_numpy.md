@@ -1,7 +1,7 @@
 ---
 title: Introduction to Python for Linear Algebra
-categories: [Blogging, Tutorial]
-tags: [writing]
+categories: [Lab1, teaching]
+tags: [numpy, scipy, pandas, data, introduction, arrays, operations]
 math: true
 ---
 

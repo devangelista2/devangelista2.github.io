@@ -1,7 +1,7 @@
 ---
 title: A (very short) introduction to Machine Learning
-categories: [Blogging, Tutorial]
-tags: [writing]
+categories: [Lab2, teaching]
+tags: [machine learning, introduction, supervised learning, unsupervised learning]
 math: true
 ---
 

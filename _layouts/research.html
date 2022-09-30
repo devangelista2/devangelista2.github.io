@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 # The Home page layout
 ---
 
@@ -9,19 +9,6 @@ layout: home
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
 {% assign posts = "" | split: "" %}
-
-<!-- Get pinned posts -->
-
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign pinned_num = pinned.size | minus: offset %}
-
-{% if pinned_num > 0 %}
-  {% for i in (offset..pinned.size) limit: pinned_num %}
-    {% assign posts = posts | push: pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_num = 0 %}
-{% endif %}
 
 <!-- Get default posts -->
 
@@ -42,7 +29,8 @@ layout: home
 
 <div id="post-list">
 
-{% for post in posts %}
+{% for post in site.posts %}
+{% if post.categories contains "research" %}
 
   <div class="post-preview">
     <h1>
@@ -87,6 +75,7 @@ layout: home
 
   </div> <!-- .post-review -->
 
+{% endif %}
 {% endfor %}
 
 </div> <!-- #post-list -->
