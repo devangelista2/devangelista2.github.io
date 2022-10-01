@@ -15,3 +15,7 @@ This blog is mainly designed to help bachelor or master students in their studie
 ### Contact me
 
 I hope that everything will be as clear as possible. If you find some error in my posts or you need more informations, please contact me on my email address [davide.evangelista5@unibo.it](mailto:davide.evangelista5@unibo.it).
+
+### Curriculum Vitae
+
+My Curriculum Vitae (CV) can be visualized <a href="{{ site.baseurl }}/assets/files/CV.pdf">here</a>.
