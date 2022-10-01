@@ -11,10 +11,19 @@ layout: page
 
 {% assign posts = "" | split: "" %}
 
+<center>
+<div id="categories-title">
+  <h1>
+    Select the category
+  </h1>
+</div>
+</center>
+
 <div id="choose-category">
 <div class="category-type">
   <h1>
-  <i class="fas fa-chalkboard"> <a href="{{ site.baseurl }}{% link _tabs/teaching.md %}" class="category-link">Teaching</a></i>
+  <a href="{{ site.baseurl }}{% link _tabs/teaching.md %}" class="category-link"><i class="fas fa-chalkboard better-icon">
+    Teaching</i></a>
   </h1>
 </div>
 
@@ -22,7 +31,7 @@ layout: page
 
 <div class="category-type">
   <h1>
-    <i class="fas fa-book"> <a href="{{ site.baseurl }}{% link _tabs/research.md %}" class="category-link">Research</a></i>
+    <a href="{{ site.baseurl }}{% link _tabs/research.md %}" class="category-link"><i class="fas fa-book better-icon"> Research </i></a>
   </h1>
 </div>
 </div>
