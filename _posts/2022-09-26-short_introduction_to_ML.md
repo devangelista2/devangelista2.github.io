@@ -91,6 +91,8 @@ Designing a ML model is hard and beyond the scope of this course. To us, it is s
 ### Supervised Learning
 In Supervised Learning (SL), we are given a dataset composed by a set of inputs $X \in \mathbb{R}^{d \times N}$ and the corresponding labels $Y \in \mathbb{R}^N$. The idea of SL techniques is to use informations contained in $X$ and $Y$ to learn structures in data such that, after the training, can estimate new values of $y = f(x)$ given a new $x \in \mathbb{R}^d$.
 
+![supervised_learning](https://miro.medium.com/max/1400/1*1AW_2jPV1YoXlt7wUWf-lA.png)
+
 ### Unsupervised Learning
 In Unsupervised Learning (UL), we are given a dataset composed by only the inputs $X \in \mathbb{R}^{d \times N}$, without any corresponding labels. The task of UL techniques is to learn pattern present in data with the intent to _classify_ new datum $x \in \mathbb{R}^d$ by retrieving its patterns.
 
@@ -107,4 +109,20 @@ The concept of flexibility is strongly related to the concept of **overfitting**
 ## Testing
 Testing the prediction ability of a ML model on the same dataset on which it has been trained is unfair. Indeed, on those data the model already observed the real outcome, and a model performing well on the _training set_ potentially just memorized each informations contained in the set, without **understanding any knowledge**. For that reason, it is important to keep a portion of the dataset unused into the Training and Tuning phases to be used to test the model. In particular, when we have $N$ available data, it is common to select a number $N_{train} < N$ and randomly extract $N_{train}$ random samples from $X$ and use only those data for the training and tuning. The remaining $N_{test} = N - N_{train}$ data can be used to test it.
 
-Test usually happens by choosing an accuracy function $\ell(y, y')$ and evaluating the mean value of $\ell(y, y')$ over the test set, where $\ell(y, y')$ is computed between the prediction of the trained model $y = f_\theta(x)$ and the true label $y' = f(x)$ for the same datum $x \in \mathbb{R}^d$.
+![train_test_split]({{ site.baseurl }}/assets/images/intro_to_ML/train_test_split.png)
+
+Test usually happens by choosing an accuracy function $\ell(y, y')$ and evaluating the mean value of $\ell(y, y')$ over the test set, where $\ell(y, y')$ is computed between the prediction of the trained model $y = f_\theta(x)$ and the true label $y' = f(x)$ for the same datum $x \in \mathbb{R}^d$. 
+
+For example, in the clustering example we are going to investigate, $f(x)$ could be the function associating each point to the corresponding cluster, while $f_\theta(x)$ maps the input data $x$ to an estimate of its potential cluster. When this is the case, we can define the accuracy of the model as the number of datapoints mapped to the correct cluster. In particular, if $k_x = f(x)$, $k = 1, \dots, K$ is the cluster associated with $x \in \mathbb{R}^n$, then for any $x$,
+
+$$
+    \ell(f_\theta(x), k_x) = \begin{cases} 1 \qquad \text{if } f_\theta(x) \neq k_x \\ 0 \qquad \text{if }  f_\theta(x) = k_x\end{cases}
+$$
+
+If $\mathcal{S} = \{ (x_i, k_{x_i}) \}_{i=1}^{N_{test}}$ is the test set (as defined in the section above), then the accuracy of the model $f_\theta(x)$ will be
+
+$$
+    Acc(f_\theta) = \frac{1}{N_{test}} \sum_{i=1}^{N_{test}} \ell (f_\theta(x_i), k_{x_i})
+$$
+
+usually referred as _misclassification rate_. We are going to implement that in Python in the following.
