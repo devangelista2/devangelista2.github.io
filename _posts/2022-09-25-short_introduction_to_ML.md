@@ -119,7 +119,7 @@ $$
     \ell(f_\theta(x), k_x) = \begin{cases} 1 \qquad \text{if } f_\theta(x) \neq k_x \\ 0 \qquad \text{if }  f_\theta(x) = k_x\end{cases}
 $$
 
-If $\mathcal{S} = \{ (x_i, k_{x_i}) \}_{i=1}^{N_{test}}$ is the test set (as defined in the section above), then the accuracy of the model $f_\theta(x)$ will be
+If $\mathcal{S} = \\{ (x_i, k_{x_i}) \\}$, $i= 1, \dots, N_{test}$, is the test set (as defined in the section above), then the accuracy of the model $f_\theta(x)$ will be
 
 $$
     Acc(f_\theta) = \frac{1}{N_{test}} \sum_{i=1}^{N_{test}} \ell (f_\theta(x_i), k_{x_i})
