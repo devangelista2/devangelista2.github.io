@@ -67,4 +67,23 @@ $$
     x_{k+1} = x_k - \alpha_k \nabla f(x_k) \qquad k = 0, 1, \dots
 $$
 
-where the initial iterate, $x_0 \in \mathbb{R}^n$, is given as input and the **step-size** (equivalently, **learning rate**) $\alpha_k > 0$ controls the decay rapidity of $f(x)$ for any $k \in \mathbb{N}$. 
+where the initial iterate, $x_0 \in \mathbb{R}^n$, is given as input and the **step-size** (equivalently, **learning rate**) $\alpha_k > 0$ controls the decay rapidity of $f(x)$ for any $k \in \mathbb{N}$.
+
+### Choice the initial iterate
+The Gradient Descent (GD) algorithm, always require the user to input an initial iterate $x_0 \in \mathbb{R}^n$. Theoretically, since GD has a _global convergence_ proprerty, for any $x_0$ it will always converge to a **stationary point** of $f(x)$, i.e. to a point such that $\nabla f(x) = 0$.
+
+If $f(x)$ is convex, then every stationary point is at (global) minimum of $f(x)$, implying that the choice of $x_0$ is not really important, and we can always use $x_0 = 0$. On the other side, when $f(x)$ is not convex, we have to choose $x_0$ such that it is as close as possible to the _right_ stationary point, to increase the chances of getting to that. If an estimate of the correct minimum point is not available, we will just consider $x_0 = 0$ to get to a general local minima.
+
+### Step Size
+Choosing the step size is the hardest component of gradient descent algorithm. Indeed, if $\alpha_k$ is too small, there is a chance we never get to the minimum, getting closer and closer without reaching it. Moreover, we can easily get stuck on local minima when the _objective function_ is non convex. On the contrary, if $\alpha_k$ is too large, there is a chance we get stuck, bouncing back and forth around the minima.
+
+![](https://s3.amazonaws.com/images.internalpointers.com/2017/01/alpha-step-size-gradient-descent.png)
+
+### Stopping Criteria
+The gradient descent is an iterative algorithm, meaning that it iteratively generates new estimates of the minima, starting from $x_0$. Theoretically, after infinite iterations, we converge to the solution of the optimization problem but, since we cannot run infinite iterations, we have to find a way to tell the algorithm when its time to stop. A convergence condition for an iterative algorithm is called **stopping criteria**. 
+
+Remember that gradient descent aim to find stationary point. Consequently, it would make sense to use the norm of the gradient as a stopping criteria. In particular, it is common to check if the norm of the gradient on the actual iterate is below a certain tollerance and, if so, we stop the iterations. In particular
+
+>**_Stopping criteria 1:_** Given a tollerance $tol_f$, for any iterate $x_k$, check whether or not $\|\| \nabla f(x_k) \|\| < tol_f \|\| \nabla f(x_0) \|\|$. If so, stop the iterations.
+
+Unfortunately, this condition alone is not sufficient. 
