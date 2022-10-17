@@ -189,7 +189,7 @@ thus, we need to define the sigmoid function $\sigma(z)$.
 ```
 # Define sigmoid
 def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
+    ...
 ```
 
 The results of the application of $\hat{x}$ on $f_w(\hat{x})$ is not hard to compute.
@@ -197,7 +197,7 @@ The results of the application of $\hat{x}$ on $f_w(\hat{x})$ is not hard to com
 ```
 # Compute the value of f
 def f(w, xhat):
-    return sigmoid(xhat.T @ w)
+    ...
 ```
 
 ### Training
@@ -207,19 +207,18 @@ To perform the training, it is sufficient to implement the loss function and its
 ```
 # Value of the loss
 def ell(w, X, Y):
-    return np.linalg.norm(f(w, X) - Y, 2) / N
+    ...
 
 # Value of the gradient
 def grad_ell(w, X, Y):
-    sig_xw = sigmoid(X.T @ w)
-    return (sig_xw.T @ (1 - sig_xw)) * (X.T @ (sig_xw - Y)) 
+    ...
 ```
 
 After training, the prediction over new data can be simply done by
 
 ```
 def predict(w, X, treshold=0.5):
-    return f(w, X) > treshold
+    ...
 ```
 
 ### Results
@@ -264,4 +263,4 @@ $$
     \sum_{i=1}^K softmax(z)_i = 1
 $$
 
-and, interestingly, $softmax'(z) = softmax(z)$, simplifying the gradient descent iterations even more. Note that, in the multi-class scenario, the weights are $d \times K$ matrices, so that $X^T W$ is an $N \times K$ matrix.
+Note that, in the multi-class scenario, the weights are $d \times K$ matrices, so that $X^T W$ is an $N \times K$ matrix.
