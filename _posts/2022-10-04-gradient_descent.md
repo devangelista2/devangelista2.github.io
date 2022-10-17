@@ -47,7 +47,7 @@ The importance of convex functions in optimization is that if $f(x)$ is convex, 
 
 ![](https://miro.medium.com/max/1400/1*itDZ27aJkg3-eVFYIV13Ww.png)
 
-### First-order sufficient condition
+### First-order conditions
 Most of the algorithms to find the minimum points of a given function $f(x)$ are based on the following property:
 
 >**_First-order sufficient condition:_** If $f: \mathbb{R}^n \to \mathbb{R}$ is a continuously differentiable function and $x^* \in \mathbb{R}^n$ is a minimum point of $f(x)$, then $\nabla f(x^*) = 0$. 
@@ -79,6 +79,40 @@ Choosing the step size is the hardest component of gradient descent algorithm. I
 
 ![](https://s3.amazonaws.com/images.internalpointers.com/2017/01/alpha-step-size-gradient-descent.png)
 
+### Backtracking
+Choosing the right step-size at each iteration is non-trivial. Indeed, convergence of Gradient Descent methods is only guaranteed if the step-size $\alpha_k$ satisfies, for any $k \in \mathbb{N}$, some conditions known as _Wolfe Conditions_:
+
+- Sufficient decrease: $$ f(x_k - \alpha_k \nabla f(x_k)) \leq f(x_k) - c_1 \alpha_k \| \nabla f(x_k) \|_2^2 $$;
+- Curvature condition: $$\nabla f(x_k)^T \nabla f(x_k - \alpha_k \nabla f(x_k)) \leq c_2 \|  \nabla f(x_k)  \|_2^2$$;
+
+with $0 < c_1 < c_2 < 1$.
+
+Luckily, those conditions are automatically satisfied if $\alpha_k$ is chosen by the **backtracking algorithm**. The idea of this algorithm is to start from an initial guess for $\alpha_k$, and then reducing it as $\alpha_k \leftarrow \tau \alpha_k$ with $\tau < 1$ until the sufficient decrease condition is satisfied. A Python implementation for the backtracking algorithm can be found in the following.
+
+```
+import numpy as np
+
+def backtracking(f, grad_f, x):
+    """
+    This function is a simple implementation of the backtracking algorithm for
+    the GD (Gradient Descent) method.
+    
+    f: function. The function that we want to optimize.
+    grad_f: function. The gradient of f(x).
+    x: ndarray. The actual iterate x_k.
+    """
+    alpha = 1
+    c = 0.8
+    tau = 0.25
+    
+    while f(x - alpha * grad_f(x)) > f(x) - c * alpha * np.linalg.norm(grad_f(x), 2) ** 2:
+        alpha = tau * alpha
+        
+        if alpha < 1e-3:
+            break
+    return alpha
+```
+
 ### Stopping Criteria
 The gradient descent is an iterative algorithm, meaning that it iteratively generates new estimates of the minima, starting from $x_0$. Theoretically, after infinite iterations, we converge to the solution of the optimization problem but, since we cannot run infinite iterations, we have to find a way to tell the algorithm when its time to stop. A convergence condition for an iterative algorithm is called **stopping criteria**. 
 
@@ -86,4 +120,10 @@ Remember that gradient descent aim to find stationary point. Consequently, it wo
 
 >**_Stopping criteria 1:_** Given a tollerance $tol_f$, for any iterate $x_k$, check whether or not $\|\| \nabla f(x_k) \|\| < tol_f \|\| \nabla f(x_0) \|\|$. If so, stop the iterations.
 
-Unfortunately, this condition alone is not sufficient. 
+Unfortunately, this condition alone is not sufficient. Indeed, if the function $f(x)$ is almost flat around its minimum, then $\|\| \nabla f(x_k) \|\|$ will be small even if $x_k$ will be far from the true minimum. 
+
+![](/assets/images/GD/plateau.png)
+
+Consequently, its required to add another stopping criteria.
+
+>**_Stopping criteria 2:_** Given a tollerance $tol_x$, for any iterate $x_k$, check whether or not $\|\| x_k - x_{k-1} \|\| < tol_x \|\| x_0 \|\|$. If so, stop the iterations.
