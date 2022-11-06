@@ -196,4 +196,4 @@ First of all, download (if required) the [data](https://virtuale.unibo.it/mod/re
 * _Optional:_ Plot an barplot ([matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html)) of the number of birth with respect to the day of the week and investigate if there are asymetries in the birth number in some days of the week. 
 
 ## Going on
-The next topic will be linear systems.
+The next topic will be <a href="{{ site.baseurl }}{% link _posts/2022-09-17-linear_systems.md %}">linear systems</a>.

@@ -329,4 +329,4 @@ print(f"{data.shape} should be equal to {np_data.shape}")
 ```
 
 ## Going on
-An application of Numpy will be on Linear Systems. An introduction to plots in Python with matplotlib can be found here.
+An application of Numpy will be on <a href="{{ site.baseurl }}{% link _posts/2022-09-17-linear_systems.md %}">Linear Systems</a>. An introduction to plots in Python with matplotlib can be found <a href="{{ site.baseurl }}{% link _posts/2022-09-16-matplotlib.md %}">here</a>.

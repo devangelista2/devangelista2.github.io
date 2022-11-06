@@ -82,13 +82,13 @@ $$
 Since
 
 $$
-    MSE(f_w(x_i), y_i) = | f_w(x_i) - y_i |^2
+    MSE(f_w(x_i), y_i) = \frac{1}{2} (f_w(x_i) - y_i )^2
 $$
 
 then
 
 $$
-    \nabla_w MSE(f_w(x_i), y_i) = \nabla_w \Bigl( | f_w(x_i) - y_i |_2^2 \Bigr) = \nabla_w f_w(x_i)^T (f_w(x_i) - y_i)
+    \nabla_w MSE(f_w(x_i), y_i) = \nabla_w \Bigl( \frac{1}{2} (f_w(x_i) - y_i )^2 \Bigr) = \nabla_w f_w(x_i)^T (f_w(x_i) - y_i)
 $$
 
 since $f_w(x_i) = \sigma (\hat{x}_i^T w)$ by \eqref{eq:model_definition}, then the chain rule implies that
@@ -133,16 +133,25 @@ $$
 Consequently, we can re-write \eqref{eq:loss_function} as 
 
 \begin{equation}\label{eq:loss_function_compact}
-    \ell(w; \mathbb{D}) = \frac{1}{N} \sum_{i=1}^N | f_w(x^i) - y^i |^2 = \frac{1}{N} || f_w(\hat{X}) - Y ||_2^2
+    \ell(w; \mathbb{D}) = \frac{1}{N} \sum_{i=1}^N \frac{1}{2} ( f_w(x^i) - y^i )^2 = \frac{1}{2N} || f_w(\hat{X}) - Y ||_2^2
 \end{equation}
 
 and, by following the same procedure we did before, we get to the compact form of \eqref{eq:final_GD_iteration}:
 
 \begin{equation}\label{eq:final_GD_iteration_compact}
-    w_{k+1} = w_k - \frac{\alpha_k}{N} \sum_{i=1}^N \sigma(\hat{X}^T w)(1 - \sigma(\hat{X}^T w)) \hat{X}^T (f_w(\hat{X}) - Y)
+    w_{k+1} = w_k - \frac{\alpha_k}{N} \hat{X}^T \Bigl(\sigma(\hat{X}^T w) \odot (1 - \sigma(\hat{X}^T w)) \odot (f_w(\hat{X}) - Y) \Bigr)
 \end{equation}
 
-which we are going to implement.
+where $\odot$ is the element-wise multiplication. To check that the shapes in Equation \eqref{eq:final_GD_iteration_compact} are correct, let's do a sanity check:
+
+* $\hat{X}$ has shape $k \times N$, where $k = d+1$ in this case;
+* $w$ has shape $k \times 1$ by definition, then $\hat{X}^T w$ has shape $N \times 1$;
+* $\sigma(\cdot)$ does not affect the shape of the input, then $\sigma(\hat{X}^T w) \odot (1 - \sigma(\hat{X}^T w))$ has shape $N \times 1$;
+* Both $f_w(\hat{X})$ and $Y$ have shape $N \times 1$, then $f_w(\hat{X}) - Y$ has shape $N \times 1$.
+* Consequently, $\sigma(\hat{X}^T w) \odot (1 - \sigma(\hat{X}^T w)) \odot (f_w(\hat{X}) - Y)$ has shape $N \times 1$ because of the element-wise multiplication;
+* Finally, $\hat{X}^T \Bigl(\sigma(\hat{X}^T w) \odot (1 - \sigma(\hat{X}^T w)) \odot (f_w(\hat{X}) - Y) \Bigr)$ has shape $k \times 1$, which is the same shape of $w_k$, then the computation is correct.
+
+Equation \eqref{eq:final_GD_iteration_compact} is what we are going to implement.
 
 ### Data Loading and Pre-processing
 We are going to test logistic regression on a simulated dataset from the library `sklearn`. Loading it into memory is very easy:
