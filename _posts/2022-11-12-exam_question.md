@@ -1,3 +1,9 @@
+---
+title: Questions of the Oral Exam
+categories: [exam, teaching]
+tags: [questions, exam, oral exam]
+math: true
+---
 ## Homework 1: Linear Algebra and Floating Point Arithmetic
 
 ### Linear Algebra
