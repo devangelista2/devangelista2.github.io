@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davide Evangelista - Unibo</title>
+    <link rel="icon" type="image/png" href="content/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" id="home-link">
+            <img src="content/profile.jpg" alt="Profile Picture" class="profile-pic">
+            </a>
+            <div class="header-info">
+                <h1>Davide Evangelista</h1>
+                <p>Here you can find information about the courses I teach and more.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=Ji7V1qEAAAAJ&hl=en" target="_blank" class="social-link">
+                    <i class="fab fa-google-scholar"></i>
+                </a>
+                <a href="https://github.com/devangelista2" target="_blank" class="social-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:davide.evangelista5@unibo.it" class="social-link">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Homepage -->
+            <h2><i class="fas fa-home"></i> <a href="#" class="menu-link" data-section="home">Homepage</a></h2>
+
+            <!-- Teaching -->
+            <h2><i class="fas fa-chalkboard-teacher"></i> <a href="#" class="teaching-link">Teaching</a></h2>
+            <ul class="year-list hidden">
+                <li><a href="#" class="menu-link" data-section="year-1">2024</a></li>
+            </ul>
+            
+            <!-- Research interests -->
+            <h2><i class="fas fa-book"></i> <a href="#" class="menu-link" data-section="research-interests">Research Interests</a></h2>
+
+            <!-- About -->
+            <h2><i class="fas fa-user"></i> <a href="#" class="menu-link" data-section="about-me">About Me</a></h2>
+        </aside>
+
+        <!-- Main content area -->
+        <div class="content">
+            <!-- Homepage Section -->
+            <section id="home" class="visible">
+                <h2>Homepage</h2>
+                <p>Welcome to my homepage! Here you can find all the important links and information.</p>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about-me" class="hidden">
+                <h2>About Me</h2>
+                <p>Take a look at my <a href="content/CV___RTDA.pdf" class="cv-link">Curriculum Vitae</a>.</p>
+            </section>
+
+            <!-- Research Interests Section -->
+            <section id="research-interests" class="hidden">
+                <h2>Research</h2>
+                <p>[Details about your research interests go here.]</p>
+            </section>
+
+            <!-- Section for Year 1 (Courses 2024) -->
+            <section id="year-1" class="hidden">
+                <h2>2024</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="carousel-item">
+                            <a href="https://devangelista2.github.io/calcolo-numerico" class="course-link">Calcolo Numerico</a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://devangelista2.github.io/statistical-mathematical-methods" class="course-link">Statistical and Mathematical Methods for Machine Learning</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
