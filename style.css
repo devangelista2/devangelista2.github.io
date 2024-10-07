@@ -1,4 +1,10 @@
+html {
+    zoom: 1; /* Ensures that the default zoom level is 1 */
+}
+
 body {
+    transform: scale(1); /* Resets any scaling issues that might arise */
+    transform-origin: 0 0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,6 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body extends to the full viewport height */
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust base font size for mobile devices */
+    }
 }
 
 header {
