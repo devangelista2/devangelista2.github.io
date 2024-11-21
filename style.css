@@ -165,6 +165,7 @@ header {
 .carousel-item {
     margin: 0 20px;
     text-align: center;
+    display: flex;
 }
 
 .course-link {
