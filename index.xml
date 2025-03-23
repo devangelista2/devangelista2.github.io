@@ -1,18 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Davide Evangelista Personal Site</title>
+        <title>Davide Evangelista Personal website</title>
         <link>https://devangelista2.github.io/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Mar 2025 14:03:12 &#43;0100</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>davide.evangelista5@unibo.it (Davide Evangelista)</managingEditor>
+            <webMaster>davide.evangelista5@unibo.it (Davide Evangelista)</webMaster>
             <atom:link href="https://devangelista2.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Mypost</title>
-    <link>https://devangelista2.github.io/posts/mypost/</link>
-    <pubDate>Sun, 23 Mar 2025 14:03:12 &#43;0100</pubDate>
-    <author>xxxx</author>
-    <guid>https://devangelista2.github.io/posts/mypost/</guid>
-    <description><![CDATA[<h2 id="hello">Hello</h2>
-<p>Just came to say hi</p>]]></description>
-</item>
-</channel>
+        </channel>
 </rss>
