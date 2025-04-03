@@ -3,7 +3,9 @@
 
 ## A.A. 2024-2025
 
-### [Computational Imaging](https://devangelista2.github.io/calcolo-numerico/computational-imaging)
+### [Computational Imaging](https://devangelista2.github.io/computational-imaging)
+- [Basics of Neural Networks](https://devangelista2.github.io/computational-imaging/intro/from-ml-to-nn.html)
+- [Basics of Pytorch](https://devangelista2.github.io/computational-imaging/intro/a-brief-overview-pytorch.html)
 
 ### [Calcolo Numerico](https://devangelista2.github.io/calcolo-numerico/)
 
