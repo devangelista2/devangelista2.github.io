@@ -6,6 +6,8 @@
 ### [Computational Imaging](https://devangelista2.github.io/computational-imaging)
 - [Basics of Neural Networks](https://devangelista2.github.io/computational-imaging/intro/from-ml-to-nn.html)
 - [Basics of Pytorch](https://devangelista2.github.io/computational-imaging/intro/a-brief-overview-pytorch.html)
+- [Introducing IPPy](https://devangelista2.github.io/computational-imaging/end-to-end/deep-dive-into-IPPy.html)
+- [End-to-End Neural Networks](https://devangelista2.github.io/computational-imaging/end-to-end/end-to-end.html)
 
 ### [Calcolo Numerico](https://devangelista2.github.io/calcolo-numerico/)
 
