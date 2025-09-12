@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Davide Evangelista Personal website</title>
-        <link>https://devangelista2.github.io/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>All Posts | Davide Evangelista Personal website</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>davide.evangelista5@unibo.it (Davide Evangelista)</managingEditor>
-            <webMaster>davide.evangelista5@unibo.it (Davide Evangelista)</webMaster><atom:link href="https://devangelista2.github.io/posts/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>davide.evangelista5@unibo.it (Davide Evangelista)</webMaster><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /></channel>
 </rss>
