@@ -3,6 +3,10 @@
 
 ## 2025
 
+- *D. Evangelista, E. Morotti, D. Bianchi, S.C. Serra, P. Luo, G. Valbusa*, **LIP-CAR: a learned inverse problem approach for medical imaging with contrast agent reduction**, MICCAI2025 Conference, 2025;    
+
+- *D. Bianchi, D. Evangelista, S. Aleotti, M. Donatelli, E. Loli Piccolomini*, **A data-dependent regularization method based on the graph Laplacian**, SIAM Journal on Scientific Computing, 2025, https://doi.org/10.1137/23M162750X; 
+
 - *E. Loli Piccolomini, D. Evangelista, E. Morotti*, **Deep Guess acceleration for explainable image reconstruction in sparse-view CT** Computational Medical Imaging and Graphics, 2025, https://doi.org/10.1016/j.compmedimag.2025.102530;    
 
 - *S. Marro, D. Evangelista, X.A. Huang, E. La Malfa, M. Lombardi, M.J. Wooldridge*, **Language Models Are Implicitly Continuous**, Thirteenth International Conference on Learning Representations (ICLR2025), 2025, https://openreview.net/forum?id=SMK0f8JoK; 
@@ -53,10 +57,7 @@
 
 ## Peer-review...
 
-- *D. Bianchi, D. Evangelista, S. Aleotti, M. Donatelli, E. Loli Piccolomini*, **A data-dependent regularization method based on the graph Laplacian**, submitted to SIAM Journal on Scientific Computing (SISC), arXiv preprint: https://arxiv.org/abs/2312.16936, 2024; 
-
+- *F. Merizzi, D. Evangelista, H. Loukos*, **Controlling ensemble variance in diffusion models: An application for reanalyses downscaling**, submitted to Neural Computing and Applications (NCAA), 2025, https://arxiv.org/abs/2501.14822; 
+  
 - *E. Morotti, D. Evangelista, A. Sebastiani, E. Loli Piccolomini*, **Adaptive Weighted Total Variation boosted by learning techniques in few-view tomographic imaging**, submitted to Inverse Problems, 2025; 
-
-
-- *D. Evangelista, E. Morotti, D. Bianchi, S.C. Serra, P. Luo, G. Valbusa*, **LIP-CAR: a learned inverse problem approach for medical imaging with contrast agent reduction**, submitted to MICCAI2025 Conference, 2025;    
 

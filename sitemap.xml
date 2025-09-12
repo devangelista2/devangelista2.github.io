@@ -2,9 +2,9 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/</loc><lastmod>2025-04-14T21:37:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2025-09-12T10:15:13&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://localhost:1313/publications/</loc><lastmod>2025-03-23T21:57:19&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/courses/</loc><lastmod>2025-04-14T21:37:21&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/courses/</loc><lastmod>2025-09-12T10:15:13&#43;02:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://localhost:1313/about/</loc><lastmod>2025-03-25T09:13:09&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://localhost:1313/posts/</loc><lastmod>2025-03-23T14:47:04&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
