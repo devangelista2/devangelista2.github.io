@@ -6,6 +6,11 @@
 ### [Statistical and Mathematical Methods for Machine Learning](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/)
 
 - [Introduction to Python](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/NLA_numpy/basics_python.html)
+- [Basics of Machine Learning](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/Optimization/intro_ML.html)
+- [Gradient Descent (GD)](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/Optimization/GD.html)
+- [Stochastic Gradient Descent (SGD)](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/Optimization/SGD.html)
+- [Supervised Learning](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/Optimization/supervised.html)
+- [Unsupervised Learning](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/Optimization/unsupervised.html)
 
 ## A.A. 2024-2025
 
