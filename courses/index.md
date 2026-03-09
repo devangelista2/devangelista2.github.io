@@ -3,6 +3,12 @@
 
 ## A.A. 2025-2026
 
+### [Computational Imaging](https://devangelista2.github.io/computational-imaging/2025-26/)
+- [Basics of Neural Networks](https://devangelista2.github.io/computational-imaging/2025-26/intro/from-ml-to-nn.html)
+- [Basics of Pytorch](https://devangelista2.github.io/computational-imaging/2025-26/intro/a-brief-overview-pytorch.html)
+- [Introducing IPPy](https://devangelista2.github.io/computational-imaging/2025-26/end-to-end/deep-dive-into-IPPy.html)
+- [End-to-End Neural Networks](https://devangelista2.github.io/computational-imaging/2025-26/end-to-end/end-to-end.html)
+
 ### [Statistical and Mathematical Methods for Machine Learning](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/)
 
 - [Introduction to Python](https://devangelista2.github.io/statistical-mathematical-methods/2025-26/NLA_numpy/basics_python.html)
@@ -14,11 +20,11 @@
 
 ## A.A. 2024-2025
 
-### [Computational Imaging](https://devangelista2.github.io/computational-imaging)
-- [Basics of Neural Networks](https://devangelista2.github.io/computational-imaging/intro/from-ml-to-nn.html)
-- [Basics of Pytorch](https://devangelista2.github.io/computational-imaging/intro/a-brief-overview-pytorch.html)
-- [Introducing IPPy](https://devangelista2.github.io/computational-imaging/end-to-end/deep-dive-into-IPPy.html)
-- [End-to-End Neural Networks](https://devangelista2.github.io/computational-imaging/end-to-end/end-to-end.html)
+### [Computational Imaging](https://devangelista2.github.io/computational-imaging/2024-25/)
+- [Basics of Neural Networks](https://devangelista2.github.io/computational-imaging/2024-25/intro/from-ml-to-nn.html)
+- [Basics of Pytorch](https://devangelista2.github.io/computational-imaging/2024-25/intro/a-brief-overview-pytorch.html)
+- [Introducing IPPy](https://devangelista2.github.io/computational-imaging/2024-25/end-to-end/deep-dive-into-IPPy.html)
+- [End-to-End Neural Networks](https://devangelista2.github.io/computational-imaging/2024-25/end-to-end/end-to-end.html)
 
 ### [Calcolo Numerico](https://devangelista2.github.io/calcolo-numerico/)
 
